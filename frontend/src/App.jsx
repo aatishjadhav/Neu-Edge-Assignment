@@ -78,6 +78,15 @@ const App = () => {
           <div className="flex justify-center items-center py-10">
             <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
           </div>
+        ) : products.length === 0 ? (
+          <div className="text-center py-10 text-gray-600">
+            The inventory is currently empty. Click{" "}
+            <span className="font-semibold text-blue-600">
+              "Generate Products"
+            </span>{" "}
+            to initialize the dataset and simulate product records for this
+            dashboard.
+          </div>
         ) : (
           <ProductTable products={products} />
         )}
